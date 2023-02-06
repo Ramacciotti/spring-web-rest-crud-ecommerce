@@ -6,6 +6,8 @@ import com.ramacciotti.ecommerce.domain.ports.outbound.CategoryPersistenceUseCas
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class CategoryPersistence implements CategoryPersistenceUseCase {
 
@@ -20,6 +22,11 @@ public class CategoryPersistence implements CategoryPersistenceUseCase {
     @Override
     public Category findCategoryByName(String name) {
         return categoryRepository.findEmployeeByName(name);
+    }
+
+    @Override
+    public void saveAll(List<Category> categoryList) {
+        categoryRepository.saveAll(categoryList);
     }
 
 }

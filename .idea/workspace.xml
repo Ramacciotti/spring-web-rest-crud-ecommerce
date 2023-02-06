@@ -4,27 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cd89e22-af1e-48fc-b05b-4810973f6896" name="Changes" comment="ignoring idea folder">
-      <change afterPath="$PROJECT_DIR$/challange/concept_model.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/inbound/rest/CategoryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/CategoryPersistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/entity/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/repository/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/dto/rest/CategoryRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/dto/rest/CategoryResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/inbound/CategoryServiceUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/CategoryPersistenceUseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/service/CategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/infrastructure/config/DataSourceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/infrastructure/config/OpenApiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database/create_database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+    <list default="true" id="6cd89e22-af1e-48fc-b05b-4810973f6896" name="Changes" comment="adding database config, openapi config, implementing category">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/SpringApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/SpringApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,12 +167,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675702446287</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adding database config, openapi config, implementing category">
+      <created>1675705049932</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675705049932</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="impleementing hexagonal architecture" />
     <MESSAGE value="ignoring idea folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="ignoring idea folder" />
+    <MESSAGE value="implementing category" />
+    <MESSAGE value="adding database config, openapi config, implementing category" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding database config, openapi config, implementing category" />
   </component>
 </project>
