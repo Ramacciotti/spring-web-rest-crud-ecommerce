@@ -1,5 +1,6 @@
 package com.ramacciotti.ecommerce.adapter.outbound.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -36,8 +37,8 @@ public class Category implements Serializable {
     @Column(nullable = false, length = 20)
     private String name;
 
+    @JsonManagedReference // lado que você quer que venha os objetos associados
     @ManyToMany(mappedBy = "categories") // diz qual é o nome do campo que tem o mapeamento do outro lado
     private List<Product> products = new ArrayList<>();
-
 
 }

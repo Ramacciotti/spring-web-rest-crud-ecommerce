@@ -1,5 +1,6 @@
 package com.ramacciotti.ecommerce.adapter.outbound.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -42,6 +43,7 @@ public class Product implements Serializable {
     @Column
     private BigDecimal price;
 
+    @JsonBackReference // omite a lista de categorias para cada produto
     @ManyToMany
     @JoinTable( // define quem vai ser a tabela que vai fazer a relação N:N no banco
             name = "table_product_category", // nome da tabela que ficará no meio dessa ligação N:N
