@@ -1,6 +1,6 @@
 package com.ramacciotti.ecommerce.domain.ports.outbound;
 
-import com.ramacciotti.ecommerce.adapter.outbound.persistence.entity.Category;
+import com.ramacciotti.ecommerce.adapter.outbound.entity.Category;
 
 import java.util.List;
 

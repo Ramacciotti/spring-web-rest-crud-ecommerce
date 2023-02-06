@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cd89e22-af1e-48fc-b05b-4810973f6896" name="Changes" comment="adding database config, openapi config, implementing category">
+    <list default="true" id="6cd89e22-af1e-48fc-b05b-4810973f6896" name="Changes" comment="saving category list on app start">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/ProductPersistence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/ProductPersistenceUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/SpringApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/SpringApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/inbound/rest/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/inbound/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/CategoryPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/CategoryPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/CategoryPersistenceUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/CategoryPersistenceUseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/service/CategoryService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,11 +117,11 @@
       <recent name="C:\Users\60003729\Documents\projects\personal\ecommerce_api\src\main\java\com\ramacciotti\ecommerce" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ramacciotti.ecommerce.domain.service" />
-      <recent name="com.ramacciotti.ecommerce.domain.ports.outbound" />
       <recent name="com.ramacciotti.ecommerce.adapter.outbound.persistence.repository" />
-      <recent name="com.ramacciotti.ecommerce.adapter.outbound.persistence.entity" />
+      <recent name="com.ramacciotti.ecommerce.domain.ports.outbound" />
       <recent name="com.ramacciotti.ecommerce.adapter.outbound.persistence" />
+      <recent name="com.ramacciotti.ecommerce.adapter.outbound.persistence.entity" />
+      <recent name="com.ramacciotti.ecommerce.domain.service" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -174,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675705049932</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="saving category list on app start">
+      <created>1675705562434</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675705562434</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,6 +200,7 @@
     <MESSAGE value="ignoring idea folder" />
     <MESSAGE value="implementing category" />
     <MESSAGE value="adding database config, openapi config, implementing category" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding database config, openapi config, implementing category" />
+    <MESSAGE value="saving category list on app start" />
+    <option name="LAST_COMMIT_MESSAGE" value="saving category list on app start" />
   </component>
 </project>

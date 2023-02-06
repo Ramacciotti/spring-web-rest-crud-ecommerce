@@ -1,7 +1,7 @@
 package com.ramacciotti.ecommerce.adapter.outbound.persistence;
 
-import com.ramacciotti.ecommerce.adapter.outbound.persistence.entity.Category;
-import com.ramacciotti.ecommerce.adapter.outbound.persistence.repository.CategoryRepository;
+import com.ramacciotti.ecommerce.adapter.outbound.entity.Category;
+import com.ramacciotti.ecommerce.adapter.outbound.repository.CategoryRepository;
 import com.ramacciotti.ecommerce.domain.ports.outbound.CategoryPersistenceUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -21,7 +21,7 @@ public class CategoryPersistence implements CategoryPersistenceUseCase {
 
     @Override
     public Category findCategoryByName(String name) {
-        return categoryRepository.findEmployeeByName(name);
+        return categoryRepository.findCategoryByName(name);
     }
 
     @Override

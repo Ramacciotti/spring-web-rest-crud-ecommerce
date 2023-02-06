@@ -1,6 +1,6 @@
 package com.ramacciotti.ecommerce.domain.service;
 
-import com.ramacciotti.ecommerce.adapter.outbound.persistence.entity.Category;
+import com.ramacciotti.ecommerce.adapter.outbound.entity.Category;
 import com.ramacciotti.ecommerce.domain.dto.rest.CategoryRequestDTO;
 import com.ramacciotti.ecommerce.domain.dto.rest.CategoryResponseDTO;
 import com.ramacciotti.ecommerce.domain.ports.inbound.CategoryServiceUseCase;
