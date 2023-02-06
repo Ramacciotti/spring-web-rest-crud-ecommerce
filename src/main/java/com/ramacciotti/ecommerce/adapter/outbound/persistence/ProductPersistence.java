@@ -15,11 +15,6 @@ public class ProductPersistence implements ProductPersistenceUseCase {
     ProductRepository productRepository;
 
     @Override
-    public void save(Product product) {
-        productRepository.save(product);
-    }
-
-    @Override
     public void saveAll(List<Product> productList) {
         productRepository.saveAll(productList);
     }

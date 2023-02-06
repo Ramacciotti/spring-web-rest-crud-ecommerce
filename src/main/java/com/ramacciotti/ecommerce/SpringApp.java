@@ -1,11 +1,16 @@
 package com.ramacciotti.ecommerce;
 
+import com.ramacciotti.ecommerce.adapter.outbound.entity.Address;
 import com.ramacciotti.ecommerce.adapter.outbound.entity.Category;
 import com.ramacciotti.ecommerce.adapter.outbound.entity.City;
+import com.ramacciotti.ecommerce.adapter.outbound.entity.Client;
 import com.ramacciotti.ecommerce.adapter.outbound.entity.Product;
 import com.ramacciotti.ecommerce.adapter.outbound.entity.State;
+import com.ramacciotti.ecommerce.domain.enums.ClientType;
+import com.ramacciotti.ecommerce.domain.ports.outbound.AddressPersistenceUseCase;
 import com.ramacciotti.ecommerce.domain.ports.outbound.CategoryPersistenceUseCase;
 import com.ramacciotti.ecommerce.domain.ports.outbound.CityPersistenceUseCase;
+import com.ramacciotti.ecommerce.domain.ports.outbound.ClientPersistenceUseCase;
 import com.ramacciotti.ecommerce.domain.ports.outbound.ProductPersistenceUseCase;
 import com.ramacciotti.ecommerce.domain.ports.outbound.StatePersistenceUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +20,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Set;
 
 @SpringBootApplication
 public class SpringApp implements CommandLineRunner {
@@ -31,6 +37,12 @@ public class SpringApp implements CommandLineRunner {
     @Autowired
     private StatePersistenceUseCase statePersistenceUseCase;
 
+    @Autowired
+    private ClientPersistenceUseCase clientPersistenceUseCase;
+
+    @Autowired
+    private AddressPersistenceUseCase addressPersistenceUseCase;
+
     public static void main(String[] args) {
         SpringApplication.run(SpringApp.class, args);
     }
@@ -38,32 +50,26 @@ public class SpringApp implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Category category1 = new Category();
-        category1.setName("technology");
-        Category category2 = new Category();
-        category2.setName("office");
+        Category category1 = new Category().withName("technology");
+        Category category2 = new Category().withName("office");
 
-        Product product1 = new Product();
-        product1.setName("computer");
-        product1.setPrice(BigDecimal.valueOf(2000));
-        Product product2 = new Product();
-        product2.setName("printer");
-        product2.setPrice(BigDecimal.valueOf(800));
-        Product product3 = new Product();
-        product3.setName("mouse");
-        product3.setPrice(BigDecimal.valueOf(100));
+        Product product1 = new Product().withName("computer").withPrice(BigDecimal.valueOf(2000));
+        Product product2 = new Product().withName("printer").withPrice(BigDecimal.valueOf(800));
+        Product product3 = new Product().withName("mouse").withPrice(BigDecimal.valueOf(100));
 
-        City city1 = new City();
-        city1.setName("São Paulo");
-        City city2 = new City();
-        city2.setName("Campinas");
-        City city3 = new City();
-        city3.setName("Uberlândia");
+        City city1 = new City().withName("São Paulo");
+        City city2 = new City().withName("Campinas");
+        City city3 = new City().withName("Uberlândia");
 
-        State state1 = new State();
-        state1.setName("São Paulo");
-        State state2 = new State();
-        state2.setName("Minas Gerais");
+        State state1 = new State().withName("São Paulo");
+        State state2 = new State().withName("Minas Gerais");
+
+        Client client1 = new Client().withName("Maria Silva").withEmail("maria@gmail.com").withCpfOrCpnj("36378912377").withClientType(ClientType.NaturalPerson).withPhones(Set.of("1234567819", "9876543213"));
+
+        Address address1 = new Address().withPublicArea("Rua Flores").withNeighborhood("Jardim").withNumber("300").withComplement("Apto 303").withCep("38220834").withClient(client1).withCity(city3);
+        Address address2 = new Address().withPublicArea("Avenida Matos").withNeighborhood("Centro").withNumber("105").withComplement("Sala 800").withCep("38777012").withClient(client1).withCity(city1);
+
+        // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         category1.setProducts(List.of(product1, product2, product3));
         category2.setProducts(List.of(product2));
@@ -75,10 +81,16 @@ public class SpringApp implements CommandLineRunner {
         state1.setCities(List.of(city1, city2));
         state2.setCities(List.of(city3));
 
+        client1.setAddresses(List.of(address1, address2));
+
+        // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
         categoryPersistenceUseCase.saveAll(List.of(category1, category2));
         productPersistenceUseCase.saveAll(List.of(product1, product2, product3));
         cityPersistenceUseCase.saveAll(List.of(city1, city2, city3));
         statePersistenceUseCase.saveAll(List.of(state1, state2));
+        clientPersistenceUseCase.saveAll(List.of(client1));
+        addressPersistenceUseCase.saveAll(List.of(address1, address2));
 
     }
 }

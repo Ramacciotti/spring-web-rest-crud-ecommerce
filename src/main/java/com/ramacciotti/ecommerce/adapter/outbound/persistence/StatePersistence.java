@@ -15,11 +15,6 @@ public class StatePersistence implements StatePersistenceUseCase {
     StateRepository productRepository;
 
     @Override
-    public void save(State product) {
-        productRepository.save(product);
-    }
-
-    @Override
     public void saveAll(List<State> productList) {
         productRepository.saveAll(productList);
     }

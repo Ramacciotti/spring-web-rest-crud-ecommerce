@@ -6,8 +6,6 @@ import java.util.List;
 
 public interface ProductPersistenceUseCase {
 
-    void save(Product product);
-
-    void saveAll(List<Product> asList);
+    void saveAll(List<Product> productList);
 
 }

@@ -15,11 +15,6 @@ public class CityPersistence implements CityPersistenceUseCase {
     CityRepository productRepository;
 
     @Override
-    public void save(City product) {
-        productRepository.save(product);
-    }
-
-    @Override
     public void saveAll(List<City> productList) {
         productRepository.saveAll(productList);
     }

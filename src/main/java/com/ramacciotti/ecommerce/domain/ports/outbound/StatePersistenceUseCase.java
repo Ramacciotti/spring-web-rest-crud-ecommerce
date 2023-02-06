@@ -6,8 +6,6 @@ import java.util.List;
 
 public interface StatePersistenceUseCase {
 
-    void save(State product);
-
-    void saveAll(List<State> asList);
+    void saveAll(List<State> stateList);
 
 }

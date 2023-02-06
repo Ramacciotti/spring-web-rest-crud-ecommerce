@@ -21,8 +21,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "table_city")
-public class City implements Serializable {
+@Table(name = "table_address")
+public class Address implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -32,14 +32,26 @@ public class City implements Serializable {
     private Long id;
 
     @Column(nullable = false)
-    private String name;
+    private String publicArea;
+
+    @Column(nullable = false)
+    private String number;
+
+    @Column(nullable = false)
+    private String complement;
+
+    @Column(nullable = false)
+    private String neighborhood;
+
+    @Column(nullable = false)
+    private String cep;
 
     @ManyToOne
-    @JoinColumn(name = "state_id")  // nome da chave estrangeira da tabela do outro lado no abnco de dados
-    private State state;
+    @JoinColumn(name = "address_id")
+    private Client client;
 
     @ManyToOne
-    @JoinColumn(name = "client_id")
-    private Address address;
+    @JoinColumn(name = "city_id")
+    private City city;
 
 }

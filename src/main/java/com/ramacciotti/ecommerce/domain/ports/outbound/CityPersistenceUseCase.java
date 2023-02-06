@@ -6,8 +6,6 @@ import java.util.List;
 
 public interface CityPersistenceUseCase {
 
-    void save(City product);
-
-    void saveAll(List<City> asList);
+    void saveAll(List<City> cityList);
 
 }

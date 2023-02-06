@@ -41,4 +41,9 @@ public class Category implements Serializable {
     @ManyToMany(mappedBy = "categories") // diz qual é o nome do campo que tem o mapeamento do outro lado
     private List<Product> products = new ArrayList<>();
 
+    public Category(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
 }
