@@ -4,15 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cd89e22-af1e-48fc-b05b-4810973f6896" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config/application-test.properties" afterDir="false" />
+    <list default="true" id="6cd89e22-af1e-48fc-b05b-4810973f6896" name="Changes" comment="ignoring idea folder">
+      <change afterPath="$PROJECT_DIR$/challange/concept_model.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/inbound/rest/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/CategoryPersistence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/dto/rest/CategoryRequestDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/dto/rest/CategoryResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/inbound/CategoryServiceUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/CategoryPersistenceUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/infrastructure/config/DataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/infrastructure/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/database/create_database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecommerce.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/EcommerceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/SpringApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ramacciotti/ecommerce/EcommerceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ramacciotti/ecommerce/SpringAppTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +52,13 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,7 +107,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/60003729/Documents/projects/personal/ecommerce_api/src/test/resources/config",
+    "last_opened_file_path": "C:/Users/60003729/Documents/projects/personal/ecommerce_api/src/main/java/com/ramacciotti/ecommerce/infrastructure/utils",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.45906165"
@@ -96,11 +115,21 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\60003729\Documents\projects\personal\ecommerce_api\src\main\java\com\ramacciotti\ecommerce\infrastructure\utils" />
+      <recent name="C:\Users\60003729\Documents\projects\personal\ecommerce_api\src\main\java\com\ramacciotti\ecommerce\infrastructure" />
       <recent name="C:\Users\60003729\Documents\projects\personal\ecommerce_api\src\test\resources\config" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\60003729\Documents\projects\personal\ecommerce_api\challange" />
       <recent name="C:\Users\60003729\Documents\projects\personal\ecommerce_api\src\main\resources\config" />
       <recent name="C:\Users\60003729\Documents\projects\personal\ecommerce_api\src\main\java\com\ramacciotti\ecommerce" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ramacciotti.ecommerce.domain.service" />
+      <recent name="com.ramacciotti.ecommerce.domain.ports.outbound" />
+      <recent name="com.ramacciotti.ecommerce.adapter.outbound.persistence.repository" />
+      <recent name="com.ramacciotti.ecommerce.adapter.outbound.persistence.entity" />
+      <recent name="com.ramacciotti.ecommerce.adapter.outbound.persistence" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -112,9 +141,9 @@
     <configuration name="SpringApp" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="SPRING_DATASOURCE_DRIVER" value="org.postgresql.Driver" />
-        <env name="SPRING_DATASOURCE_PASSWORD" value="admin" />
+        <env name="SPRING_DATASOURCE_PASSWORD" value="ramacciotti" />
         <env name="SPRING_DATASOURCE_URL" value="jdbc:postgresql://localhost:5432/database_ecommerce" />
-        <env name="SPRING_DATASOURCE_USERNAME" value="postgres" />
+        <env name="SPRING_DATASOURCE_USERNAME" value="ramacciotti" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="com.ramacciotti.ecommerce.SpringApp" />
       <module name="ecommerce" />
@@ -133,19 +162,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="ecommerce" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="ecommerce" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -156,6 +172,26 @@
       <option name="presentableId" value="Default" />
       <updated>1675692849094</updated>
     </task>
+    <task id="LOCAL-00001" summary="impleementing hexagonal architecture">
+      <created>1675702401908</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1675702401908</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ignoring idea folder">
+      <created>1675702446287</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675702446287</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="impleementing hexagonal architecture" />
+    <MESSAGE value="ignoring idea folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="ignoring idea folder" />
   </component>
 </project>
