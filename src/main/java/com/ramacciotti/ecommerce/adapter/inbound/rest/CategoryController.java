@@ -1,4 +1,4 @@
-package com.ramacciotti.ecommerce.adapter.inbound;
+package com.ramacciotti.ecommerce.adapter.inbound.rest;
 
 import com.ramacciotti.ecommerce.domain.dto.rest.CategoryRequestDTO;
 import com.ramacciotti.ecommerce.domain.dto.rest.CategoryResponseDTO;

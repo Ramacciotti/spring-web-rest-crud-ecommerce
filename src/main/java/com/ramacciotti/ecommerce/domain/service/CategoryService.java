@@ -5,11 +5,11 @@ import com.ramacciotti.ecommerce.domain.dto.rest.CategoryRequestDTO;
 import com.ramacciotti.ecommerce.domain.dto.rest.CategoryResponseDTO;
 import com.ramacciotti.ecommerce.domain.ports.inbound.CategoryServiceUseCase;
 import com.ramacciotti.ecommerce.domain.ports.outbound.CategoryPersistenceUseCase;
+import com.ramacciotti.ecommerce.domain.exception.ItemNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.webjars.NotFoundException;
 
 @Slf4j
 @Service
@@ -48,17 +48,15 @@ public class CategoryService implements CategoryServiceUseCase {
 
         Category category = categoryPersistenceUseCase.findCategoryById(id);
 
-        if (category != null) {
+        if (category == null) {
 
-            ModelMapper modelMapper = new ModelMapper();
-
-            return modelMapper.map(category, CategoryResponseDTO.class);
-
-        } else {
-
-            throw new NotFoundException("category_not_found");
+            throw new ItemNotFoundException("category_not_found");
 
         }
+
+        ModelMapper modelMapper = new ModelMapper();
+
+        return modelMapper.map(category, CategoryResponseDTO.class);
 
     }
 
