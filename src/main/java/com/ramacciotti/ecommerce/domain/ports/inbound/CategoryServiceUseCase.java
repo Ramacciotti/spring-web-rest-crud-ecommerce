@@ -7,4 +7,6 @@ public interface CategoryServiceUseCase {
 
     CategoryResponseDTO postCategory(CategoryRequestDTO categoryRequestDTO);
 
+    CategoryResponseDTO getCategory(Long id);
+
 }

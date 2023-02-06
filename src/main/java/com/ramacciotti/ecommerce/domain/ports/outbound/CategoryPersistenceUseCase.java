@@ -12,4 +12,6 @@ public interface CategoryPersistenceUseCase {
 
     void saveAll(List<Category> asList);
 
+    Category findCategoryById(Long id);
+
 }

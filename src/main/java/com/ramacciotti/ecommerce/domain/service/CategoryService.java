@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.webjars.NotFoundException;
 
 @Slf4j
 @Service
@@ -31,11 +32,31 @@ public class CategoryService implements CategoryServiceUseCase {
             categoryPersistenceUseCase.save(category);
 
             ModelMapper modelMapper = new ModelMapper();
+
             return modelMapper.map(category, CategoryResponseDTO.class);
 
         } else {
 
             throw new RuntimeException("category_name_already_registered");
+
+        }
+
+    }
+
+    @Override
+    public CategoryResponseDTO getCategory(Long id) {
+
+        Category category = categoryPersistenceUseCase.findCategoryById(id);
+
+        if (category != null) {
+
+            ModelMapper modelMapper = new ModelMapper();
+
+            return modelMapper.map(category, CategoryResponseDTO.class);
+
+        } else {
+
+            throw new NotFoundException("category_not_found");
 
         }
 

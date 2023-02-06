@@ -29,4 +29,9 @@ public class CategoryPersistence implements CategoryPersistenceUseCase {
         categoryRepository.saveAll(categoryList);
     }
 
+    @Override
+    public Category findCategoryById(Long id) {
+        return categoryRepository.findCategoryById(id);
+    }
+
 }
