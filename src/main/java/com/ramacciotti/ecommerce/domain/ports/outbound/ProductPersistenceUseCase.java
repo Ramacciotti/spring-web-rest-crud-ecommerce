@@ -8,8 +8,6 @@ public interface ProductPersistenceUseCase {
 
     void save(Product product);
 
-    Product findProductByName(String name);
-
     void saveAll(List<Product> asList);
 
 }

@@ -20,11 +20,6 @@ public class ProductPersistence implements ProductPersistenceUseCase {
     }
 
     @Override
-    public Product findProductByName(String name) {
-        return productRepository.findProductByName(name);
-    }
-
-    @Override
     public void saveAll(List<Product> productList) {
         productRepository.saveAll(productList);
     }
