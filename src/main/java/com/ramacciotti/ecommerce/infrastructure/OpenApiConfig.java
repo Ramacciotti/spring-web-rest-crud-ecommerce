@@ -1,4 +1,4 @@
-package com.ramacciotti.ecommerce.infrastructure.config;
+package com.ramacciotti.ecommerce.infrastructure;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -45,18 +45,23 @@ public class OpenApiConfig {
 
         Tag categoryController = new Tag();
         categoryController.setName("Category Controller");
-        categoryController.setDescription("Save a category in database");
 
-        return List.of(categoryController);
+        Tag clientController = new Tag();
+        clientController.setName("Client Controller");
+
+        Tag orderController = new Tag();
+        orderController.setName("Order Controller");
+
+        return List.of(categoryController, clientController, orderController);
 
     }
 
     private List<Server> servers() {
 
-        Server baseServer = new Server();
-        baseServer.setUrl("http://localhost:8080");
+        Server localServer = new Server();
+        localServer.setUrl("http://localhost:8080");
 
-        return List.of(baseServer);
+        return List.of(localServer);
 
     }
 

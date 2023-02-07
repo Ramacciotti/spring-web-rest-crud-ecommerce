@@ -5,11 +5,13 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public enum ClientType {
+public enum PaymentStatus {
 
-    NATURALPERSON("Natural Person"),
-    LEGALPERSON("Legal Person");
+    PENDANT("Pendant"),
+    SETTLED("Settled"),
+    CANCELED("Canceled");
 
     private final String description;
 
 }
+

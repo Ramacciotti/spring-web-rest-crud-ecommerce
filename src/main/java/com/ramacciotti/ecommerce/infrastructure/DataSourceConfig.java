@@ -1,4 +1,4 @@
-package com.ramacciotti.ecommerce.infrastructure.config;
+package com.ramacciotti.ecommerce.infrastructure;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.jdbc.DataSourceBuilder;

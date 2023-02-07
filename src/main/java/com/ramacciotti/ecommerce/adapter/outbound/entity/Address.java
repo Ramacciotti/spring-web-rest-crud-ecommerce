@@ -22,7 +22,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "table_address")
+@Table(name = "address")
 public class Address implements Serializable {
 
     @Serial

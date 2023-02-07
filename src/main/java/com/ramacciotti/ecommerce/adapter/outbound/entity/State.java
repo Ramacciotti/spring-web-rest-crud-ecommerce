@@ -23,7 +23,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "table_state")
+@Table(name = "state")
 public class State implements Serializable {
 
     @Serial

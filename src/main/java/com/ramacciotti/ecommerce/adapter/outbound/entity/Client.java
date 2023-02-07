@@ -28,7 +28,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "table_client")
+@Table(name = "client")
 public class Client implements Serializable {
 
     @Serial
@@ -56,5 +56,8 @@ public class Client implements Serializable {
     @JsonManagedReference
     @OneToMany(mappedBy = "client") // quem foi o atributo que mapeou do outro lado
     private List<Address> addresses = new ArrayList<>();
+
+    @OneToMany(mappedBy = "client")  // quem foi o atributo que mapeou do outro lado
+    private List<ClientOrder> clientOrders = new ArrayList<>();
 
 }

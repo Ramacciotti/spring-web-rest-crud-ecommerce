@@ -4,23 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cd89e22-af1e-48fc-b05b-4810973f6896" name="Changes" comment="fixing readme">
+    <list default="true" id="6cd89e22-af1e-48fc-b05b-4810973f6896" name="Changes" comment="creating client endpoint, fixing json return">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/inbound/rest/OrderController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/ClientOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/PaymentCard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/PaymentSlip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/OrderPersistence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/PaymentPersistence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/OrderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/PaymentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/dto/rest/OrderResponseDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/enums/PaymentStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/inbound/OrderServiceUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/OrderPersistenceUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/PaymentPersistenceUseCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/inbound/rest/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/inbound/rest/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/SpringApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/SpringApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/City.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/CategoryPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/CategoryPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/ClientPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/ClientPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/ClientRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/dto/rest/CategoryRequestDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/dto/rest/CategoryResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/dto/rest/CategoryResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/inbound/CategoryServiceUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/inbound/CategoryServiceUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/CategoryPersistenceUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/CategoryPersistenceUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/ClientPersistenceUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/ClientPersistenceUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/State.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/enums/ClientType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/enums/ClientType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/infrastructure/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/infrastructure/DataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/infrastructure/config/OpenApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/infrastructure/OpenApiConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +65,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -110,6 +123,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ramacciotti.ecommerce.adapter.outbound.entity" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\60003729\Documents\projects\personal\ecommerce_api\src\main\resources\database" />
       <recent name="C:\Users\60003729\Documents\projects\personal\ecommerce_api\src\main\java\com\ramacciotti\ecommerce\infrastructure\utils" />
@@ -122,9 +138,9 @@
       <recent name="C:\Users\60003729\Documents\projects\personal\ecommerce_api\src\main\java\com\ramacciotti\ecommerce" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ramacciotti.ecommerce.adapter.outbound.persistence" />
-      <recent name="com.ramacciotti.ecommerce.adapter.outbound.repository" />
       <recent name="com.ramacciotti.ecommerce.domain.ports.outbound" />
+      <recent name="com.ramacciotti.ecommerce.adapter.outbound.repository" />
+      <recent name="com.ramacciotti.ecommerce.adapter.outbound.persistence" />
       <recent name="com.ramacciotti.ecommerce.adapter.outbound.entity" />
       <recent name="com.ramacciotti.ecommerce.domain.dto.exception" />
     </key>
