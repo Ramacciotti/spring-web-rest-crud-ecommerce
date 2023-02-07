@@ -17,7 +17,6 @@ import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @With
 @Data
@@ -37,13 +36,9 @@ public class Category implements Serializable {
     @Column(nullable = false, length = 20)
     private String name;
 
-    @JsonManagedReference // lado que você quer que venha os objetos associados
-    @ManyToMany(mappedBy = "categories") // diz qual é o nome do campo que tem o mapeamento do outro lado
+    @JsonManagedReference
+    @ManyToMany(mappedBy = "categories")
     private List<Product> products = new ArrayList<>();
 
-    public Category(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
 
 }

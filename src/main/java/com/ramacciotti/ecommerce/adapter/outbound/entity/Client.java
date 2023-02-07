@@ -49,15 +49,15 @@ public class Client implements Serializable {
 
     private ClientType clientType;
 
-    @ElementCollection // entidade fraca
-    @CollectionTable(name = "phone") // define nome da entidade a ser criada
+    @ElementCollection
+    @CollectionTable(name = "phone")
     private Set<String> phones = new HashSet<>();
 
     @JsonManagedReference
-    @OneToMany(mappedBy = "client") // quem foi o atributo que mapeou do outro lado
+    @OneToMany(mappedBy = "client")
     private List<Address> addresses = new ArrayList<>();
 
-    @OneToMany(mappedBy = "client")  // quem foi o atributo que mapeou do outro lado
+    @OneToMany(mappedBy = "client")
     private List<ClientOrder> clientOrders = new ArrayList<>();
 
 }

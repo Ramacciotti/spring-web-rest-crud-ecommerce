@@ -91,7 +91,7 @@ public class SpringApp implements CommandLineRunner {
         Payment payment1 = new PaymentCard(null, PaymentStatus.SETTLED, clientOrder1, 6);
         Payment payment2 = new PaymentSlip(null, PaymentStatus.PENDANT, clientOrder2, generateDate("20/10/2017"), null);
 
-        // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
         category1.setProducts(List.of(product1, product2, product3));
         category2.setProducts(List.of(product2));
@@ -106,9 +106,11 @@ public class SpringApp implements CommandLineRunner {
         client1.setAddresses(List.of(address1, address2));
 
         clientOrder1.setPayment(payment1);
-        clientOrder2.setPayment(payment2);
+        clientOrder1.setProducts(List.of(product1, product3));
 
-        // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        clientOrder2.setPayment(payment2);
+        clientOrder2.setProducts(List.of(product2));
+
 
         categoryPersistenceUseCase.saveAll(List.of(category1, category2));
         productPersistenceUseCase.saveAll(List.of(product1, product2, product3));

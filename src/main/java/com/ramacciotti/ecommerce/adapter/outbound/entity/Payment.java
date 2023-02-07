@@ -21,7 +21,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Inheritance(strategy = InheritanceType.JOINED) // define a estrategia utilizada para herança
+@Inheritance(strategy = InheritanceType.JOINED)
 @Entity
 @Table(name = "payment")
 public class Payment implements Serializable {
@@ -29,7 +29,7 @@ public class Payment implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    @Id // em ligações one to one não existe a anotação @GeneratedValue aqui
+    @Id
     private Long id;
 
     private PaymentStatus status;

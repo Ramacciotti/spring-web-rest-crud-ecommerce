@@ -37,7 +37,7 @@ public class City implements Serializable {
 
     @ManyToOne
     @JsonManagedReference
-    @JoinColumn(name = "state_id")  // nome da chave estrangeira da tabela do outro lado no abnco de dados
+    @JoinColumn(name = "state_id")
     private State state;
 
     @ManyToOne

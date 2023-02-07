@@ -37,7 +37,7 @@ public class State implements Serializable {
     private String name;
 
     @JsonBackReference
-    @OneToMany(mappedBy = "state") // quem foi o atributo que mapeou do outro lado
+    @OneToMany(mappedBy = "state")
     private List<City> cities = new ArrayList<>();
 
 }

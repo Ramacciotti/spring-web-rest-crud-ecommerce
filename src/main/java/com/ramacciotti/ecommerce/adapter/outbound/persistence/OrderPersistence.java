@@ -19,9 +19,4 @@ public class OrderPersistence implements OrderPersistenceUseCase {
         orderRepository.saveAll(clientOrderList);
     }
 
-    @Override
-    public ClientOrder findOrderById(Long id) {
-        return orderRepository.findOrderById(id);
-    }
-
 }

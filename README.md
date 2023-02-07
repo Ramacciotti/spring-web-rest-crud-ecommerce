@@ -1,9 +1,7 @@
 # Ecommerce Api
 
 <p><b>Description:</b> This case study aims to show in practice how a conceptual model can be implemented on the object-oriented paradigm, using market standards and good practices</p>
-<p><b>Challange Creation:</b> Nelio Alves</p>
-<p><b>Api Development:</b> Mariana Ramacciotti</p>
-<p><b>Tags:</b> JAVA 17, SpringBoot, API REST, Web, Relational Database, PostGreSql, Hexagonal Architecture</p>
+<p><b>Tags:</b> JAVA 17, SpringBoot, API REST, Web, Relational Database, PostGreSql, Hexagonal Architecture, @ManyToMany, @OneToMany, @OneToOne, herance</p>
 <hr>
 
 ## Challenge 1
@@ -14,7 +12,7 @@
 
 ## Challenge 2
 
-<p>Create the following conceptual model instance:</p>
+<p>Create the following conceptual model instances:</p>
 
 <img src="challange/create_instances.jpg"/>
 

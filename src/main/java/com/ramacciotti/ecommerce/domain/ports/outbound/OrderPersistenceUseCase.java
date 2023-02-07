@@ -8,6 +8,4 @@ public interface OrderPersistenceUseCase {
 
     void saveAll(List<ClientOrder> clientOrderList);
 
-    ClientOrder findOrderById(Long id);
-
 }

@@ -26,6 +26,18 @@ public class OpenApiConfig {
     @Value("${info.app.description}")
     private String description;
 
+    @Value("${info.app.author}")
+    private String author;
+
+    @Value("${info.app.repository}")
+    private String repository;
+
+    @Value("${info.app.linkedin}")
+    private String linkedin;
+
+    @Value("${info.app.content}")
+    private String content;
+
     @Bean
     public OpenAPI configure() {
         return new OpenAPI()
@@ -38,7 +50,7 @@ public class OpenApiConfig {
         return new Info()
                 .title(name)
                 .version(version)
-                .description(description);
+                .description(buildDescription());
     }
 
     private List<Tag> tags() {
@@ -49,10 +61,7 @@ public class OpenApiConfig {
         Tag clientController = new Tag();
         clientController.setName("Client Controller");
 
-        Tag orderController = new Tag();
-        orderController.setName("Order Controller");
-
-        return List.of(categoryController, clientController, orderController);
+        return List.of(categoryController, clientController);
 
     }
 
@@ -63,6 +72,16 @@ public class OpenApiConfig {
 
         return List.of(localServer);
 
+    }
+
+    private String buildDescription() {
+        return String.format(
+                "<b>Description:</b> %s <br/><br/>" +
+                "<b>Content:</b> %s <br/><br/>" +
+                "<b>Author:</b> %s <br/><br/>" +
+                "<a href=" + repository + ">Github Repository</a><br/><br/>" +
+                "<a href=" + linkedin + ">Linkedin Profile</a><br/>",
+                description, content, author);
     }
 
 }

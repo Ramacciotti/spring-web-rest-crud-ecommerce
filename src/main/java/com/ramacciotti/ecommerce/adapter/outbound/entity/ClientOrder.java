@@ -1,11 +1,15 @@
 package com.ramacciotti.ecommerce.adapter.outbound.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
@@ -17,6 +21,8 @@ import lombok.With;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @With
 @Data
@@ -35,7 +41,7 @@ public class ClientOrder implements Serializable {
 
     private LocalDate date;
 
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "clientOrder") // nome do campo do outro lado
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "clientOrder")
     private Payment payment;
 
     @ManyToOne
@@ -44,6 +50,15 @@ public class ClientOrder implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "address_id")
-    private Address address; // não terá mapeamento do outro lado pq a associação é unidirecional
+    private Address address;
+
+    @ManyToMany
+    @JsonManagedReference
+    @JoinTable(
+            name = "order_product",
+            joinColumns = @JoinColumn(name = "client_order_id"),
+            inverseJoinColumns = @JoinColumn(name = "product_id")
+    )
+    private List<Product> products = new ArrayList<>();
 
 }

@@ -1,6 +1,7 @@
 package com.ramacciotti.ecommerce.adapter.outbound.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -20,7 +21,6 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @With
 @Data
@@ -44,12 +44,16 @@ public class Product implements Serializable {
     private BigDecimal price;
 
     @ManyToMany
-    @JsonBackReference // omite a lista de categorias para cada produto
-    @JoinTable( // define quem vai ser a tabela que vai fazer a relação N:N no banco
-            name = "product_category", // nome da tabela que ficará no meio dessa ligação N:N
-            joinColumns = @JoinColumn(name = "product_id"), // qual é a chave estrangeira correspondente ao produto
-            inverseJoinColumns = @JoinColumn(name = "category_id") // qual é a chave estrangeira correspondente a categoria
+    @JsonBackReference
+    @JoinTable(
+            name = "product_category",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "category_id")
     )
     private List<Category> categories = new ArrayList<>();
+
+    @JsonBackReference
+    @ManyToMany(mappedBy = "products")
+    private List<ClientOrder> orders = new ArrayList<>();
 
 }
