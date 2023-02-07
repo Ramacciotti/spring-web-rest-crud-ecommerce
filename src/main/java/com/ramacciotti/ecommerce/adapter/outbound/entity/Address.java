@@ -1,5 +1,6 @@
 package com.ramacciotti.ecommerce.adapter.outbound.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -47,10 +48,12 @@ public class Address implements Serializable {
     private String cep;
 
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "address_id")
     private Client client;
 
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "city_id")
     private City city;
 

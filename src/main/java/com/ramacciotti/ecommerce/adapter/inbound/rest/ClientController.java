@@ -1,7 +1,7 @@
 package com.ramacciotti.ecommerce.adapter.inbound.rest;
 
-import com.ramacciotti.ecommerce.domain.dto.rest.CategoryResponseDTO;
-import com.ramacciotti.ecommerce.domain.ports.inbound.CategoryServiceUseCase;
+import com.ramacciotti.ecommerce.domain.dto.rest.ClientResponseDTO;
+import com.ramacciotti.ecommerce.domain.ports.inbound.ClientServiceUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
@@ -18,16 +18,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/v1")
 @CrossOrigin(origins = "*")
-@Tag(name = "Category Controller")
-public class CategoryController {
+@Tag(name = "Client Controller")
+public class ClientController {
 
     @Autowired
-    CategoryServiceUseCase categoryServiceUseCase;
+    ClientServiceUseCase clientServiceUseCase;
 
-    @GetMapping(path = "/category/{id}")
-    @Operation(description = "Uses an id to locate an specific category at the database")
-    public ResponseEntity<CategoryResponseDTO> getCategoryById(@PathVariable("id") Long id) throws Exception {
-        CategoryResponseDTO result = categoryServiceUseCase.getCategory(id);
+    @GetMapping(path = "/client/{id}")
+    @Operation(description = "Uses an id to locate an specific client at the database")
+    public ResponseEntity<ClientResponseDTO> getClientById(@PathVariable("id") Long id) {
+        ClientResponseDTO result = clientServiceUseCase.getClient(id);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 

@@ -1,5 +1,6 @@
 package com.ramacciotti.ecommerce.adapter.outbound.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.ramacciotti.ecommerce.domain.enums.ClientType;
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
@@ -52,6 +53,7 @@ public class Client implements Serializable {
     @CollectionTable(name = "phone") // define nome da entidade a ser criada
     private Set<String> phones = new HashSet<>();
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "client") // quem foi o atributo que mapeou do outro lado
     private List<Address> addresses = new ArrayList<>();
 

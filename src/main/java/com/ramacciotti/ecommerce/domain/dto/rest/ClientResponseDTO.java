@@ -1,19 +1,22 @@
 package com.ramacciotti.ecommerce.domain.dto.rest;
 
-import com.ramacciotti.ecommerce.adapter.outbound.entity.Product;
+import com.ramacciotti.ecommerce.adapter.outbound.entity.Address;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
 @NoArgsConstructor
-public class CategoryResponseDTO {
+public class ClientResponseDTO {
 
     private String name;
 
-    private List<Product> products;
+    private Set<String> phones;
+
+    private List<Address> addresses;
 
 }

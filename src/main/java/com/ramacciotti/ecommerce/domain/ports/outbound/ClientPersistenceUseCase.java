@@ -8,4 +8,6 @@ public interface ClientPersistenceUseCase {
 
     void saveAll(List<Client> clientList);
 
+    Client findClientById(Long id);
+
 }

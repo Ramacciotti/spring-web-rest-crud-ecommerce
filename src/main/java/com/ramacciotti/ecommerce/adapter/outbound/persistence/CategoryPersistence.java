@@ -15,16 +15,6 @@ public class CategoryPersistence implements CategoryPersistenceUseCase {
     CategoryRepository categoryRepository;
 
     @Override
-    public void save(Category category) {
-        categoryRepository.save(category);
-    }
-
-    @Override
-    public Category findCategoryByName(String name) {
-        return categoryRepository.findCategoryByName(name);
-    }
-
-    @Override
     public void saveAll(List<Category> categoryList) {
         categoryRepository.saveAll(categoryList);
     }

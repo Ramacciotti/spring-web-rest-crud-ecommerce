@@ -6,10 +6,6 @@ import java.util.List;
 
 public interface CategoryPersistenceUseCase {
 
-    void save(Category category);
-
-    Category findCategoryByName(String name);
-
     void saveAll(List<Category> asList);
 
     Category findCategoryById(Long id);

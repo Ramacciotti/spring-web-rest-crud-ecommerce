@@ -1,5 +1,6 @@
 package com.ramacciotti.ecommerce.adapter.outbound.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,10 +36,12 @@ public class City implements Serializable {
     private String name;
 
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn(name = "state_id")  // nome da chave estrangeira da tabela do outro lado no abnco de dados
     private State state;
 
     @ManyToOne
+    @JsonManagedReference
     @JoinColumn(name = "client_id")
     private Address address;
 

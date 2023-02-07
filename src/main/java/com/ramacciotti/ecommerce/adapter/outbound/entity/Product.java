@@ -43,8 +43,8 @@ public class Product implements Serializable {
     @Column
     private BigDecimal price;
 
-    @JsonBackReference // omite a lista de categorias para cada produto
     @ManyToMany
+    @JsonBackReference // omite a lista de categorias para cada produto
     @JoinTable( // define quem vai ser a tabela que vai fazer a relação N:N no banco
             name = "table_product_category", // nome da tabela que ficará no meio dessa ligação N:N
             joinColumns = @JoinColumn(name = "product_id"), // qual é a chave estrangeira correspondente ao produto

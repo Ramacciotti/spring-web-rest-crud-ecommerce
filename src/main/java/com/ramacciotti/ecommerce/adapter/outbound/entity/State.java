@@ -1,5 +1,6 @@
 package com.ramacciotti.ecommerce.adapter.outbound.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -35,6 +36,7 @@ public class State implements Serializable {
     @Column(nullable = false)
     private String name;
 
+    @JsonBackReference
     @OneToMany(mappedBy = "state") // quem foi o atributo que mapeou do outro lado
     private List<City> cities = new ArrayList<>();
 
