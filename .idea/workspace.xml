@@ -4,35 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cd89e22-af1e-48fc-b05b-4810973f6896" name="Changes" comment="creating client endpoint, fixing json return">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database/table_client_order.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database/table_order_product.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database/table_payment.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database/table_payment_card.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database/table_payment_slip.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database/table_phone.sql" afterDir="false" />
+    <list default="true" id="6cd89e22-af1e-48fc-b05b-4810973f6896" name="Changes" comment="associating product and clientorder, removing commentary, fixing openapiconfig">
+      <change afterPath="$PROJECT_DIR$/challange/cover.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challange/concept_model.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/challange/concept_model.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challange/create_instances.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/challange/create_instances.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/challange/endpoints.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/challange/endpoints.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/SpringApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/SpringApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/inbound/rest/OrderController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/City.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/ClientOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/ClientOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/entity/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/OrderPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/persistence/OrderPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/adapter/outbound/repository/PaymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/dto/rest/OrderResponseDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/inbound/OrderServiceUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/inbound/OrderServiceUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/OrderPersistenceUseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/ports/outbound/OrderPersistenceUseCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/domain/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/infrastructure/OpenApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ramacciotti/ecommerce/infrastructure/OpenApiConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/config/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/application.properties" afterDir="false" />
     </list>
@@ -250,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675724959582</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="associating product and clientorder, removing commentary, fixing openapiconfig">
+      <created>1675783257188</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1675783257188</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -264,7 +246,8 @@
     <MESSAGE value="fixing json response on getCagoryById() method" />
     <MESSAGE value="implementing exception handler" />
     <MESSAGE value="implementing client and address" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementing client and address" />
+    <MESSAGE value="associating product and clientorder, removing commentary, fixing openapiconfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="associating product and clientorder, removing commentary, fixing openapiconfig" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
