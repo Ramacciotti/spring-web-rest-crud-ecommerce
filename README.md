@@ -3,7 +3,7 @@
 <p><b>Description:</b> This case study aims to show in practice how a conceptual model can be implemented on the object-oriented paradigm, using market standards and good practices</p>
 <p><b>Tags:</b> JAVA 17, SpringBoot, API REST, Web, Relational Database, PostGreSql, Hexagonal Architecture, @ManyToMany, @OneToMany, @OneToOne, herance</p>
 
-[![](challange/cover.jpg)](https://youtu.be/scwQob9Nfho)
+[![](items/challange/cover.jpg)](https://youtu.be/scwQob9Nfho)
 
 <hr>
 
